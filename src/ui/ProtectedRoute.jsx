@@ -27,7 +27,7 @@ function ProtectedRoute({ children }) {
       </FullPage>
     );
 
-  if (isAuthenticated) return children;
+  return isAuthenticated ? children : null;
 }
 
 export default ProtectedRoute;
