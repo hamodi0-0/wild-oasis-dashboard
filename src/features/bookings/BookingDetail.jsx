@@ -71,12 +71,12 @@ function BookingDetail() {
             </Button>
           )}
           <Modal.Open opens="confirm-delete-booking">
-            <Button variation="danger" icon={<HiTrash />}>
+            <Button $variation="danger" icon={<HiTrash />}>
               Delete
             </Button>
           </Modal.Open>
 
-          <Button variation="secondary" onClick={moveBack}>
+          <Button $variation="secondary" onClick={moveBack}>
             Back
           </Button>
         </ButtonGroup>

@@ -1,6 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
 import Spinner from "../../ui/Spinner";
-import { getCabins } from "../../services/apiCabins";
 import CabinRow from "./CabinRow";
 import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
@@ -8,15 +6,10 @@ import { useGetOperatedCabins } from "./useGetOperatedCabins";
 import Empty from "../../ui/Empty";
 
 function CabinTable() {
-  const { isLoading, data: cabins } = useQuery({
-    queryKey: ["cabins"],
-    queryFn: getCabins,
-  });
-
-  const operatedCabins = useGetOperatedCabins(cabins);
+  const { isLoading, operatedCabins } = useGetOperatedCabins();
 
   if (isLoading) return <Spinner />;
-  if (!cabins.length) return <Empty resourceName="cabins" />;
+  if (!operatedCabins.length) return <Empty resourceName="cabins" />;
 
   return (
     <Menus>
