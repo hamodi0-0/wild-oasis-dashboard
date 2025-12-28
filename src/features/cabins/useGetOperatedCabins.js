@@ -1,8 +1,11 @@
 import { useSearchParams } from "react-router-dom";
+import { useCabins } from "./useCabins";
 
-export function useGetOperatedCabins(cabins) {
+export function useGetOperatedCabins() {
+  const { isLoading, cabins } = useCabins();
   const [searchParams] = useSearchParams();
 
+  if (isLoading) return null;
   // FILTERING
   const filterParameter = searchParams.get("discount") || "all";
 
@@ -27,5 +30,5 @@ export function useGetOperatedCabins(cabins) {
     (a, b) => (a[field] - b[field]) * modifier
   );
 
-  return operatedCabins;
+  return { isLoading, operatedCabins };
 }
