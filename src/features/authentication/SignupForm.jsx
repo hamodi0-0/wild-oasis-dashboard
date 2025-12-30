@@ -79,10 +79,12 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button $variation="secondary" type="reset" onClick={reset}>
+        <Button variation="primary" size="small" type="reset" onClick={reset}>
           Cancel
         </Button>
-        <Button>{isLoading ? <SpinnerMini /> : "Create new user"}</Button>
+        <Button variation="primary" size="small">
+          {isLoading ? <SpinnerMini /> : "Create new user"}
+        </Button>
       </FormRow>
     </Form>
   );
