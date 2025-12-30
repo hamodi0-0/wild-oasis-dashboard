@@ -143,4 +143,3 @@ Menus.List = List;
 Menus.Button = Button;
 
 export default Menus;
-w;
