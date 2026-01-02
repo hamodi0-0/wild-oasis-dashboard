@@ -60,7 +60,9 @@ function UpdateSettingsForm({ settings }) {
         />
       </FormRow>
       <FormRow>
-        <Button>Update settings</Button>
+        <Button variation="primary" size="small">
+          Update settings
+        </Button>
       </FormRow>
     </Form>
   );
