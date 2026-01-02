@@ -8,8 +8,8 @@ import toast from "react-hot-toast";
 import { useLogin } from "./useLogin";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("hetakax338@gamintor.com");
+  const [password, setPassword] = useState("12345679");
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {
