@@ -1,6 +1,7 @@
 # The Wild Oasis - Hotel Management System
 
 Internal dashboard for hotel staff to manage cabins, bookings, check-ins, and hotel settings.
+You can view the website [here](https://hamodi-wild-oasis.netlify.app/)
 
 ## Overview
 
